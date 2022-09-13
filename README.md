@@ -120,9 +120,10 @@ The .NET SDK is a set of libraries and tools that allow developers to create .NE
 
 #### Creating and running
 
-To create a development container:
+To create a development container, cd into `App` directory and build with Dockerfile:
 
 ```bash
+cd App/
 docker build -t dotnet-app-img-dev -f Dockerfile.dev .
 ```
 
@@ -155,10 +156,11 @@ dotnet run
 
 #### Creating and deploying
 
-To create a deploy container:
+To create a deploy container, cd into `App` directory and build with Dockerfile:
 
 ```bash
-docker build -t dotnet-app-img -f App/Dockerfile.deploy ./App
+cd App/
+docker build -t dotnet-app-img -f Dockerfile.deploy .
 ```
 
 To run the container:
