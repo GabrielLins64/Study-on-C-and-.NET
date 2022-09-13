@@ -7,6 +7,11 @@
 - [Requirements](#requirements)
 - [About C#](#about-c)
   - [C# Language versioning](#c-language-versioning)
+- [C# Built-in types](#c-built-in-types)
+  - [Value types](#value-types)
+    - [Integral numeric types](#integral-numeric-types)
+    - [Floating-point numeric types](#floating-point-numeric-types)
+  - [Reference types](#reference-types)
 - [About .NET](#about-net)
   - [.NET Framework](#net-framework)
   - [.NET Core](#net-core)
@@ -90,6 +95,224 @@ The latest C# compiler determines a default language version based on your proje
       <td>C#  7.3</td>
     </tr>
   </tbody>
+</table>
+
+## C# Built-in types
+
+There are two kinds of types in C#: reference types and value types. Variables of reference types store references to their data (objects), while variables of value types directly contain their data. With reference types, two variables can reference the same object; therefore, operations on one variable can affect the object referenced by the other variable. With value types, each variable has its own copy of the data, and it is not possible for operations on one variable to affect the other (except in the case of in, ref and out parameter variables; see in, ref and out parameter modifier).
+
+### Value types
+
+<table aria-label="Built-in types (C# reference)" class="table table-sm">
+<thead>
+<tr>
+<th>C# type keyword</th>
+<th>.NET type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="bool" data-linktype="relative-path"><code>bool</code></a></td>
+<td><a href="/en-us/dotnet/api/system.boolean" class="no-loc" data-linktype="absolute-path">System.Boolean</a></td>
+</tr>
+<tr>
+<td><a href="integral-numeric-types" data-linktype="relative-path"><code>byte</code></a></td>
+<td><a href="/en-us/dotnet/api/system.byte" class="no-loc" data-linktype="absolute-path">System.Byte</a></td>
+</tr>
+<tr>
+<td><a href="integral-numeric-types" data-linktype="relative-path"><code>sbyte</code></a></td>
+<td><a href="/en-us/dotnet/api/system.sbyte" class="no-loc" data-linktype="absolute-path">System.SByte</a></td>
+</tr>
+<tr>
+<td><a href="char" data-linktype="relative-path"><code>char</code></a></td>
+<td><a href="/en-us/dotnet/api/system.char" class="no-loc" data-linktype="absolute-path">System.Char</a></td>
+</tr>
+<tr>
+<td><a href="floating-point-numeric-types" data-linktype="relative-path"><code>decimal</code></a></td>
+<td><a href="/en-us/dotnet/api/system.decimal" class="no-loc" data-linktype="absolute-path">System.Decimal</a></td>
+</tr>
+<tr>
+<td><a href="floating-point-numeric-types" data-linktype="relative-path"><code>double</code></a></td>
+<td><a href="/en-us/dotnet/api/system.double" class="no-loc" data-linktype="absolute-path">System.Double</a></td>
+</tr>
+<tr>
+<td><a href="floating-point-numeric-types" data-linktype="relative-path"><code>float</code></a></td>
+<td><a href="/en-us/dotnet/api/system.single" class="no-loc" data-linktype="absolute-path">System.Single</a></td>
+</tr>
+<tr>
+<td><a href="integral-numeric-types" data-linktype="relative-path"><code>int</code></a></td>
+<td><a href="/en-us/dotnet/api/system.int32" class="no-loc" data-linktype="absolute-path">System.Int32</a></td>
+</tr>
+<tr>
+<td><a href="integral-numeric-types" data-linktype="relative-path"><code>uint</code></a></td>
+<td><a href="/en-us/dotnet/api/system.uint32" class="no-loc" data-linktype="absolute-path">System.UInt32</a></td>
+</tr>
+<tr>
+<td><a href="integral-numeric-types" data-linktype="relative-path"><code>nint</code></a></td>
+<td><a href="/en-us/dotnet/api/system.intptr" class="no-loc" data-linktype="absolute-path">System.IntPtr</a></td>
+</tr>
+<tr>
+<td><a href="integral-numeric-types" data-linktype="relative-path"><code>nuint</code></a></td>
+<td><a href="/en-us/dotnet/api/system.uintptr" class="no-loc" data-linktype="absolute-path">System.UIntPtr</a></td>
+</tr>
+<tr>
+<td><a href="integral-numeric-types" data-linktype="relative-path"><code>long</code></a></td>
+<td><a href="/en-us/dotnet/api/system.int64" class="no-loc" data-linktype="absolute-path">System.Int64</a></td>
+</tr>
+<tr>
+<td><a href="integral-numeric-types" data-linktype="relative-path"><code>ulong</code></a></td>
+<td><a href="/en-us/dotnet/api/system.uint64" class="no-loc" data-linktype="absolute-path">System.UInt64</a></td>
+</tr>
+<tr>
+<td><a href="integral-numeric-types" data-linktype="relative-path"><code>short</code></a></td>
+<td><a href="/en-us/dotnet/api/system.int16" class="no-loc" data-linktype="absolute-path">System.Int16</a></td>
+</tr>
+<tr>
+<td><a href="integral-numeric-types" data-linktype="relative-path"><code>ushort</code></a></td>
+<td><a href="/en-us/dotnet/api/system.uint16" class="no-loc" data-linktype="absolute-path">System.UInt16</a></td>
+</tr>
+</tbody>
+</table>
+
+#### Integral numeric types
+
+The integral numeric types represent integer numbers. All integral numeric types are value types. They're also simple types and can be initialized with literals. All integral numeric types support arithmetic, bitwise logical, comparison, and equality operators.
+
+<table aria-label="Characteristics of the integral types" class="table table-sm">
+<thead>
+<tr>
+<th>C# type/keyword</th>
+<th>Range</th>
+<th>Size</th>
+<th>.NET type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sbyte</code></td>
+<td>-128 to 127</td>
+<td>Signed 8-bit integer</td>
+<td><a href="/en-us/dotnet/api/system.sbyte" class="no-loc" data-linktype="absolute-path">System.SByte</a></td>
+</tr>
+<tr>
+<td><code>byte</code></td>
+<td>0 to 255</td>
+<td>Unsigned 8-bit integer</td>
+<td><a href="/en-us/dotnet/api/system.byte" class="no-loc" data-linktype="absolute-path">System.Byte</a></td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td>-32,768 to 32,767</td>
+<td>Signed 16-bit integer</td>
+<td><a href="/en-us/dotnet/api/system.int16" class="no-loc" data-linktype="absolute-path">System.Int16</a></td>
+</tr>
+<tr>
+<td><code>ushort</code></td>
+<td>0 to 65,535</td>
+<td>Unsigned 16-bit integer</td>
+<td><a href="/en-us/dotnet/api/system.uint16" class="no-loc" data-linktype="absolute-path">System.UInt16</a></td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td>-2,147,483,648 to 2,147,483,647</td>
+<td>Signed 32-bit integer</td>
+<td><a href="/en-us/dotnet/api/system.int32" class="no-loc" data-linktype="absolute-path">System.Int32</a></td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td>0 to 4,294,967,295</td>
+<td>Unsigned 32-bit integer</td>
+<td><a href="/en-us/dotnet/api/system.uint32" class="no-loc" data-linktype="absolute-path">System.UInt32</a></td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td>-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+<td>Signed 64-bit integer</td>
+<td><a href="/en-us/dotnet/api/system.int64" class="no-loc" data-linktype="absolute-path">System.Int64</a></td>
+</tr>
+<tr>
+<td><code>ulong</code></td>
+<td>0 to 18,446,744,073,709,551,615</td>
+<td>Unsigned 64-bit integer</td>
+<td><a href="/en-us/dotnet/api/system.uint64" class="no-loc" data-linktype="absolute-path">System.UInt64</a></td>
+</tr>
+<tr>
+<td><code>nint</code></td>
+<td>Depends on platform (computed at runtime)</td>
+<td>Signed 32-bit or 64-bit integer</td>
+<td><a href="/en-us/dotnet/api/system.intptr" class="no-loc" data-linktype="absolute-path">System.IntPtr</a></td>
+</tr>
+<tr>
+<td><code>nuint</code></td>
+<td>Depends on platform (computed at runtime)</td>
+<td>Unsigned 32-bit or 64-bit integer</td>
+<td><a href="/en-us/dotnet/api/system.uintptr" class="no-loc" data-linktype="absolute-path">System.UIntPtr</a></td>
+</tr>
+</tbody>
+</table>
+
+#### Floating-point numeric types
+
+The floating-point numeric types represent real numbers. All floating-point numeric types are value types. They are also simple types and can be initialized with literals. All floating-point numeric types support arithmetic, comparison, and equality operators.
+
+<table aria-label="Characteristics of the floating-point types" class="table table-sm">
+<thead>
+<tr>
+<th>C# type/keyword</th>
+<th>Approximate range</th>
+<th>Precision</th>
+<th>Size</th>
+<th>.NET type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>float</code></td>
+<td>±1.5 x 10<sup>−45</sup> to ±3.4 x 10<sup>38</sup></td>
+<td>~6-9 digits</td>
+<td>4 bytes</td>
+<td><a href="/en-us/dotnet/api/system.single" class="no-loc" data-linktype="absolute-path">System.Single</a></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>±5.0 × 10<sup>−324</sup> to ±1.7 × 10<sup>308</sup></td>
+<td>~15-17 digits</td>
+<td>8 bytes</td>
+<td><a href="/en-us/dotnet/api/system.double" class="no-loc" data-linktype="absolute-path">System.Double</a></td>
+</tr>
+<tr>
+<td><code>decimal</code></td>
+<td>±1.0 x 10<sup>-28</sup> to ±7.9228 x 10<sup>28</sup></td>
+<td>28-29 digits</td>
+<td>16 bytes</td>
+<td><a href="/en-us/dotnet/api/system.decimal" class="no-loc" data-linktype="absolute-path">System.Decimal</a></td>
+</tr>
+</tbody>
+</table>
+
+### Reference types
+
+<table aria-label="Table 2" class="table table-sm">
+<thead>
+<tr>
+<th>C# type keyword</th>
+<th>.NET type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="reference-types#the-object-type" data-linktype="relative-path"><code>object</code></a></td>
+<td><a href="/en-us/dotnet/api/system.object" class="no-loc" data-linktype="absolute-path">System.Object</a></td>
+</tr>
+<tr>
+<td><a href="reference-types#the-string-type" data-linktype="relative-path"><code>string</code></a></td>
+<td><a href="/en-us/dotnet/api/system.string" class="no-loc" data-linktype="absolute-path">System.String</a></td>
+</tr>
+<tr>
+<td><a href="reference-types#the-dynamic-type" data-linktype="relative-path"><code>dynamic</code></a></td>
+<td><a href="/en-us/dotnet/api/system.object" class="no-loc" data-linktype="absolute-path">System.Object</a></td>
+</tr>
+</tbody>
 </table>
 
 ## About .NET
