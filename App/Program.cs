@@ -9,10 +9,24 @@ namespace DotNet.Docker
         {
             // Program myProgram = new Program();
             // myProgram.Print(args);
-
             // Counter(args);
+            // ReadInput();
+            TypeCasting();
+        }
 
-            ReadInput();
+        static void TypeCasting()
+        {
+            int x = (int) 5.5; // Double to Int
+            Console.WriteLine(x);
+
+            float y = 5.4f; // Double to Float
+            Console.WriteLine(y);
+
+            int z = (int) '5'; // Char to Int (ASCII)
+            Console.WriteLine(z);
+
+            int j = Int32.Parse("5"); // String to Int
+            Console.WriteLine(j);
         }
 
         static void ReadInput()
