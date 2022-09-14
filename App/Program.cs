@@ -13,7 +13,22 @@ namespace DotNet.Docker
             // ReadInput();
             // TypeCasting();
             // MathTests();
-            StringTests();
+            // StringTests();
+            PersonTest();
+        }
+
+        static void PersonTest()
+        {
+            Person person = new Person();
+            person.FirstName = "Caleb";
+            person.LastName = "Curry";
+
+            Console.WriteLine(person.FirstName);
+            Console.WriteLine(person.FullName);
+            Console.WriteLine(person.GetFullName());
+
+            person.MiddleName = "GB";
+            Console.WriteLine(person.MiddleName);
         }
 
         static void StringTests()
