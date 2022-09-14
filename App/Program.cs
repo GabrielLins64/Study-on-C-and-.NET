@@ -11,7 +11,20 @@ namespace DotNet.Docker
             // myProgram.Print(args);
             // Counter(args);
             // ReadInput();
-            TypeCasting();
+            // TypeCasting();
+            MathTests();
+        }
+
+        static void MathTests()
+        {
+            double x = 50.5;
+            Console.WriteLine(Math.Round(x)); // 50
+            Console.WriteLine(Math.Round(x, 0, MidpointRounding.AwayFromZero)); // 51
+            Console.WriteLine(Math.Round(x, 0, MidpointRounding.ToEven)); // 50
+            Console.WriteLine(Math.Truncate(50.9)); // 50
+            Console.WriteLine(Math.Abs(-50)); // 50
+            Console.WriteLine(Math.Sign(-50)); // -1
+            Console.WriteLine(Math.Sign(50)); // 1
         }
 
         static void TypeCasting()
