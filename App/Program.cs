@@ -12,7 +12,28 @@ namespace DotNet.Docker
             // Counter(args);
             // ReadInput();
             // TypeCasting();
-            MathTests();
+            // MathTests();
+            StringTests();
+        }
+
+        static void StringTests()
+        {
+            string name = "Caleb";
+            Console.WriteLine(name.Length); // 5
+            Console.WriteLine(name.CompareTo("Caleb")); // 0 (equal)
+            Console.WriteLine(name.CompareTo("Baleb")); // 1
+            Console.WriteLine(name.CompareTo("Daleb")); // -1
+            Console.WriteLine(name == "Caleb"); // True
+            Console.WriteLine(name.IndexOf("le")); // 2
+            Console.WriteLine("Calaleb".IndexOf("al", 2)); // 3 (2nd occurrence)
+            Console.WriteLine("Calaleb".Remove(1, 2)); // "Caleb" (Remove 2 characteres, starting at index 1)
+            Console.WriteLine("  \t\tCaleb      ".Trim()); // "Caleb"
+            PrintArray("Hi my name is Caleb".Split(" ")); // [Hi, my, name, is, Caleb]
+        }
+
+        static void PrintArray(string[] arr)
+        {
+            Console.WriteLine("[{0}]", string.Join(", ", arr));
         }
 
         static void MathTests()
